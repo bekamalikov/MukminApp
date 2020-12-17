@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_name"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.name.NameFragment"
+        android:label="@string/name_string"
+        tools:layout="@layout/name_fragment" />
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.main.MainFragment"
+        android:label="@string/main_str"
+        tools:layout="@layout/main_fragment">
+
+        <action
+            android:id="@+id/action_nav_main_to_bottom_sheet"
+            app:destination="@id/bottom_sheet" />
+        <action
+            android:id="@+id/action_nav_main_to_compassFragment"
+            app:destination="@id/compassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_quran"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.quran.QuranFragment"
+        android:label="@string/Quran_string"
+        tools:layout="@layout/quran_fragment" />
+    <fragment
+        android:id="@+id/nav_namaz"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.namaz.NamazFragment"
+        android:label="@string/namaz_string"
+        tools:layout="@layout/namaz_fragment" />
+    <fragment
+        android:id="@+id/nav_dua"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.dua.DuaFragment"
+        android:label="@string/dua_strinf"
+        tools:layout="@layout/fragment_dua" />
+
+    <fragment
+        android:id="@+id/nav_hadis"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.hadis.HadisFragment"
+        android:label="@string/hadis_string"
+        tools:layout="@layout/hadis_fragment" />
+    <dialog
+        android:id="@+id/bottom_sheet"
+        android:name="com.kg.malikov.mukminapp.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer" >
+        <action
+            android:id="@+id/action_bottom_sheet_to_nav_dua"
+            app:destination="@id/nav_dua"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_bottom_sheet_to_nav_name"
+            app:destination="@id/nav_name"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_bottom_sheet_to_nav_hadis"
+            app:destination="@id/nav_hadis"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_bottom_sheet_to_nav_namaz"
+            app:destination="@id/nav_namaz"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_bottom_sheet_to_nav_quran"
+            app:destination="@id/nav_quran"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true"/>
+    </dialog>
+    <fragment
+        android:id="@+id/compassFragment"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.compass.CompassFragment"
+        android:label="compass_fragment"
+        tools:layout="@layout/compass_fragment" />
+</navigation>

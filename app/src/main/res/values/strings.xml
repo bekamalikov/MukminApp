@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MukminApp</string>
+    <string name="more_str">More</string>
+    <string name="title_name_menu">Имена</string>
+    <string name="title_dua_menu">Дуа</string>
+    <string name="title_hadis_menu">40 Хадисов</string>
+    <string name="title_namaz_menu">Намаз</string>
+    <string name="title_translate_quran_menu">Перевод Корана</string>
+    <string name="title_share_menu">Поделиться</string>
+    <string name="title_other_menu">Другие ресурсы</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dua_strinf">Dau</string>
+    <string name="name_string">Name</string>
+    <string name="hadis_string">Hadis</string>
+    <string name="Quran_string">Quran</string>
+    <string name="namaz_string">Namaz</string>
+    <string name="main_str">Main</string>
+</resources>

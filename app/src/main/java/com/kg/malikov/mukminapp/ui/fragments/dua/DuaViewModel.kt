@@ -2,6 +2,6 @@ package com.kg.malikov.mukminapp.ui.fragments.dua
 
 import androidx.lifecycle.ViewModel
 
-class ViewModel : ViewModel() {
+class DuaViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

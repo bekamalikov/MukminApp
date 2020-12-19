@@ -46,7 +46,7 @@
         tools:layout="@layout/hadis_fragment" />
     <dialog
         android:id="@+id/bottom_sheet"
-        android:name="com.kg.malikov.mukminapp.NavigationDrawerFragment"
+        android:name="com.kg.malikov.mukminapp.ui.AppNavigationDrawerFragment"
         tools:layout="@layout/fragment_navigation_drawer" >
         <action
             android:id="@+id/action_bottom_sheet_to_nav_dua"

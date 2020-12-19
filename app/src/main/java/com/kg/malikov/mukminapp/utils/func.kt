@@ -1,9 +1,11 @@
-package com.kg.malikov.mukminapp
+package com.kg.malikov.mukminapp.utils
 
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.kg.malikov.mukminapp.R
 
 fun Fragment.showToast(message: String) {
     Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show()
@@ -36,4 +38,12 @@ fun Fragment.replaceFragment(fragment: Fragment) {
             R.id.nav_host_fragment,
             fragment
         )?.commit()
+}
+
+fun View.gone() {
+    this.visibility = View.GONE
+}
+
+fun View.visible() {
+    this.visibility = View.VISIBLE
 }

@@ -1,6 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_for_item_time"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_white_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_tv_cons_time_namaz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:text="@string/constant_item_text_time"
+                    android:textColor="@color/background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:text="01.01.19"
+                    android:textColor="@color/background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:background="#80000000" />
+
+            <LinearLayout
+                android:id="@+id/bagymdat_linear"
+                style="@style/item_linear_for_time_namaz">
+
+                <TextView
+                    style="@style/item_tv_style_for_name_namaz"
+                    android:text="@string/def_bagymdat_text" />
+
+                <TextView
+                    android:id="@+id/item_tv_bagymdat_time"
+                    style="@style/item_tv_time_namaz"
+                    android:text="@string/item_bagymdat_def_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sunrise_linear"
+                style="@style/item_linear_for_time_namaz">
+
+                <TextView
+                    style="@style/item_tv_style_for_name_namaz"
+                    android:text="@string/def_sunrise_text" />
+
+                <TextView
+                    android:id="@+id/item_tv_sunris_time"
+                    style="@style/item_tv_time_namaz"
+                    android:text="@string/item_bagymdat_def_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/peshim_linear"
+                style="@style/item_linear_for_time_namaz">
+
+                <TextView
+                    style="@style/item_tv_style_for_name_namaz"
+                    android:text="@string/def_peshim_text" />
+
+                <TextView
+                    android:id="@+id/item_tv_peshim_time"
+                    style="@style/item_tv_time_namaz"
+                    android:text="@string/item_bagymdat_def_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/asr_linear"
+                style="@style/item_linear_for_time_namaz">
+
+                <TextView
+                    style="@style/item_tv_style_for_name_namaz"
+                    android:text="@string/def_asr_text" />
+
+                <TextView
+                    android:id="@+id/item_tv_asr_time"
+                    style="@style/item_tv_time_namaz"
+                    android:text="@string/item_bagymdat_def_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/magrib_linear"
+                style="@style/item_linear_for_time_namaz">
+
+                <TextView
+                    style="@style/item_tv_style_for_name_namaz"
+                    android:text="@string/def_magrib_text" />
+
+                <TextView
+                    android:id="@+id/item_tv_magrib_time"
+                    style="@style/item_tv_time_namaz"
+                    android:text="@string/item_bagymdat_def_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/isha_linear"
+                style="@style/item_linear_for_time_namaz">
+
+                <TextView
+                    style="@style/item_tv_style_for_name_namaz"
+                    android:text="@string/def_isha_text" />
+
+                <TextView
+                    android:id="@+id/item_tv_isha_time"
+                    style="@style/item_tv_time_namaz"
+                    android:text="@string/item_bagymdat_def_time" />
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

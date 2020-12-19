@@ -48,4 +48,33 @@
         <item name="android:background">@drawable/background_for_bottom_sheet</item>
 
     </style>
+
+    <style name="item_tv_time_namaz">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:textColor">@color/black_color_for_text_time</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_tv_style_for_name_namaz">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/black_color_for_text_time</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_linear_for_time_namaz">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
 </resources>

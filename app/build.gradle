@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'koin'
 }
 
 android {
@@ -52,5 +53,12 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
-
+// Koin for Android
+    implementation "org.koin:koin-android:$koin_version"
+// Koin Android Scope features
+    implementation "org.koin:koin-android-scope:$koin_version"
+// Koin Android ViewModel features
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+// Koin Android Experimental features
+    implementation "org.koin:koin-android-ext:$koin_version"
 }

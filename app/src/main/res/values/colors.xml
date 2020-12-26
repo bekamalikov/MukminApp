@@ -15,4 +15,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="black_color_for_text_time">#66000000</color>
     <color name="background">#EDE8DE</color>
+    <color name="background_text_white">#F6F6F6</color>
 </resources>

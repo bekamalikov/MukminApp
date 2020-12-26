@@ -79,4 +79,9 @@
         android:name="com.kg.malikov.mukminapp.ui.fragments.compass.CompassFragment"
         android:label="compass_fragment"
         tools:layout="@layout/compass_fragment" />
+    <fragment
+        android:id="@+id/detailAyatFragment"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.detailayat.DetailAyatFragment"
+        android:label="detail_ayat_fragment"
+        tools:layout="@layout/detail_ayat_fragment" />
 </navigation>

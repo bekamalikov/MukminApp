@@ -23,6 +23,11 @@
     <string name="def_asr_text">Аср</string>
     <string name="def_magrib_text">Шам</string>
     <string name="def_isha_text">Куптан</string>
-    <string name="item_bagymdat_def_time">7:11</string>
+    <string name="item_bagymdat_def_time">0:00</string>
     <string name="def_value">122:11</string>
+    <string name="bishkek_string_def_value">Бишкек</string>
+    <string name="arab_sura_al_fatiha">سُورَةُ ٱلْفَاتِحَةِ</string>
+    <string name="eng_sura_al_fatiha">Al-Fatiihaa</string>
+    <string name="str_dot_def">.</string>
+    <string name="_1">1</string>
 </resources>

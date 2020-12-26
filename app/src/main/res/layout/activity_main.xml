@@ -28,6 +28,8 @@
             android:layout_gravity="bottom"
             app:backgroundTint="@color/primary"
             app:buttonGravity="bottom|top"
+            app:hideOnScroll="true"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:fabAlignmentMode="center"
             app:menu="@menu/app_bar_menu"
             app:navigationIcon="@drawable/ic_menu">

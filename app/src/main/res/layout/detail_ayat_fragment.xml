@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.quran.QuranFragment"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".ui.fragments.detailayat.DetailAyatFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec_view_sura_in_quran"
+        android:id="@+id/rec_view_detail_sura"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_sura" />
-
+        tools:listitem="@layout/item_ayat_quran" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

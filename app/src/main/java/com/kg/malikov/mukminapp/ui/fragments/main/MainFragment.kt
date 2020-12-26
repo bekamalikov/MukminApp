@@ -1,35 +1,50 @@
 package com.kg.malikov.mukminapp.ui.fragments.main
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.kg.malikov.mukminapp.R
+import com.kg.malikov.mukminapp.databinding.MainFragmentBinding
+import com.kg.malikov.mukminapp.models.namaztime.Datum
+import com.kg.malikov.mukminapp.utils.showToast
+import org.koin.android.viewmodel.ext.android.viewModel
 
-class MainFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = MainFragment()
+class MainFragment : Fragment(R.layout.main_fragment) {
+    private val viewModel: MainViewModel by viewModel()
+    private var binding: MainFragmentBinding? = null
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = MainFragmentBinding.bind(view)
+        observer()
+        viewModel.listTimes.observeForever {
+            filingRecViewValue(it)
+        }
+
     }
 
-    private lateinit var viewModel: MainViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+    //fill rec view value
+    private fun filingRecViewValue(it: Datum?) {
+        binding?.itemTvBagymdatTime?.text = it?.timings?.fajr
+        binding?.itemTvSunrisTime?.text = it?.timings?.sunrise
+        binding?.itemTvPeshimTime?.text = it?.timings?.dhuhr
+        binding?.itemTvAsrTime?.text = it?.timings?.asr
+        binding?.itemTvMagribTime?.text = it?.timings?.maghrib
+        binding?.itemTvIshaTime?.text = it?.timings?.isha
+        binding?.itemTvDate?.text = it?.date?.gregorian?.date
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+    private fun observer() {
+        viewModel.fetchTime()
+        viewModel.errorMessage.observeForever {
+            showToast(it)
+        }
     }
 
-    fun NavClick() {
-
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
     }
 }

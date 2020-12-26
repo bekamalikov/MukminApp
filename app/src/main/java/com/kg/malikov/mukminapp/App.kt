@@ -1,6 +1,8 @@
 package com.kg.malikov.mukminapp
 
 import android.app.Application
+import com.kg.malikov.mukminapp.di.networkModule
+import com.kg.malikov.mukminapp.di.repositoryModule
 import com.kg.malikov.mukminapp.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -12,7 +14,7 @@ class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
-            modules(viewModelModule)
+            modules(mutableListOf( repositoryModule, networkModule,viewModelModule,))
 
         }
     }

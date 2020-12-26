@@ -8,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.kg.malikov.mukminapp.MainActivity
 import com.kg.malikov.mukminapp.R
@@ -17,8 +16,6 @@ import com.kg.malikov.mukminapp.R
 class AppNavigationDrawerFragment : BottomSheetDialogFragment() {
     lateinit var navigationView: NavigationView
     lateinit var mainActivity: MainActivity
-    lateinit var fab: FloatingActionButton
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,31 +29,6 @@ class AppNavigationDrawerFragment : BottomSheetDialogFragment() {
         navigationView = view.findViewById(R.id.navigation_view)
         navigationView.setupWithNavController(findNavController())
         mainActivity = MainActivity()
-        findNavController().addOnDestinationChangedListener { controller, destination, arguments ->
-            when (destination.id) {
-                R.id.nav_dua -> {
-                    fab.hide()
-                }
-                R.id.nav_name -> {
-                    fab.hide()
-                }
-                R.id.nav_hadis -> {
-                    fab.hide()
-                }
-                R.id.nav_namaz -> {
-                    fab.hide()
-                }
-                R.id.nav_quran -> {
-                    fab.hide()
-                }
-                R.id.nav_main -> {
-                    fab.show()
-                }
-
-
-            }
-
-        }
         navSelected()
     }
 
@@ -68,6 +40,4 @@ class AppNavigationDrawerFragment : BottomSheetDialogFragment() {
             return@setNavigationItemSelectedListener true
         }
     }
-
-
 }

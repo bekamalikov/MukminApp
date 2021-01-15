@@ -3,7 +3,7 @@ package com.kg.malikov.mukminapp.di
 import com.kg.malikov.mukminapp.data.network.RetrofitClient
 import com.kg.malikov.mukminapp.data.network.repository.Repository
 import com.kg.malikov.mukminapp.ui.fragments.compass.CompassViewModel
-import com.kg.malikov.mukminapp.ui.fragments.detailayat.DetailAyatViewModel
+import com.kg.malikov.mukminapp.ui.fragments.detail_ayat.DetailAyatViewModel
 import com.kg.malikov.mukminapp.ui.fragments.dua.DuaViewModel
 import com.kg.malikov.mukminapp.ui.fragments.hadis.HadisViewModel
 import com.kg.malikov.mukminapp.ui.fragments.main.MainViewModel
@@ -19,7 +19,7 @@ var viewModelModule = module {
     viewModel { HadisViewModel() }
     viewModel { CompassViewModel() }
     viewModel { NamazViewModel() }
-    viewModel { NameViewModel() }
+    viewModel { NameViewModel(get()) }
     viewModel { QuranViewModel(get()) }
     viewModel { DetailAyatViewModel(get()) }
 }

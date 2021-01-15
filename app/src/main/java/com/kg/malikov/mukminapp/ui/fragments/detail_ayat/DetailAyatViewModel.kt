@@ -1,6 +1,5 @@
-package com.kg.malikov.mukminapp.ui.fragments.detailayat
+package com.kg.malikov.mukminapp.ui.fragments.detail_ayat
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kg.malikov.mukminapp.data.network.Status

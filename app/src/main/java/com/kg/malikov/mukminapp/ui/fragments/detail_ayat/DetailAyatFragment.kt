@@ -1,38 +1,28 @@
-package com.kg.malikov.mukminapp.ui.fragments.detailayat
+package com.kg.malikov.mukminapp.ui.fragments.detail_ayat
 
 import android.content.Context
 import android.os.Build
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
-import com.kg.malikov.mukminapp.R
+import com.kg.malikov.mukminapp.base.BaseChangeFragment
 import com.kg.malikov.mukminapp.databinding.DetailAyatFragmentBinding
 import com.kg.malikov.mukminapp.interfaces.OnFragmentInteractionListener
-import com.kg.malikov.mukminapp.ui.fragments.detailayat.adapter.DetailSuraAdapter
+import com.kg.malikov.mukminapp.ui.fragments.detail_ayat.adapter.DetailSuraAdapter
+import com.kg.malikov.mukminapp.utils.SURA_POSITION_KYE
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class DetailAyatFragment : Fragment(R.layout.detail_ayat_fragment) {
+class DetailAyatFragment : BaseChangeFragment<DetailAyatFragmentBinding>() {
     private val viewModel: DetailAyatViewModel by viewModel()
     lateinit var adapter: DetailSuraAdapter
-    private var binding: DetailAyatFragmentBinding? = null
     private var listener: OnFragmentInteractionListener? = null
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val pos = arguments?.getInt("pos")
-        binding = DetailAyatFragmentBinding.bind(view)
-        scrollRecView()
-        observer(pos)
-        initRecView()
-    }
 
-    private fun initRecView() {
+    override fun initRecView() {
         adapter = DetailSuraAdapter(mutableListOf())
-        binding?.recViewDetailSura?.adapter = adapter
+        binding.recViewDetailSura.adapter = adapter
     }
 
     //observer and filling adapter
-    private fun observer(pos: Int?) {
+    override fun observer() {
+        val pos = arguments?.getInt(SURA_POSITION_KYE)
         viewModel.fetchSuraFromQuran(pos.toString())
         viewModel.listTimes.observeForever {
             adapter.addItems(it)
@@ -40,9 +30,9 @@ class DetailAyatFragment : Fragment(R.layout.detail_ayat_fragment) {
     }
 
     //fun for hide when scroll recView
-    private fun scrollRecView() {
+    override fun scrollRecView() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            binding?.recViewDetailSura?.setOnScrollChangeListener { _, scrollX, scrollY, oldScrollX, oldScrollY ->
+            binding.recViewDetailSura.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
                 val delta = scrollY - oldScrollY
                 listener?.onFragmentScrolled(delta.toFloat())
             }
@@ -64,8 +54,4 @@ class DetailAyatFragment : Fragment(R.layout.detail_ayat_fragment) {
         listener = null
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
-    }
 }

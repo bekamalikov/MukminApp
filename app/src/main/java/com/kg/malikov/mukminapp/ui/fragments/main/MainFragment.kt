@@ -3,6 +3,7 @@ package com.kg.malikov.mukminapp.ui.fragments.main
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomappbar.BottomAppBar
 import com.kg.malikov.mukminapp.R
 import com.kg.malikov.mukminapp.databinding.MainFragmentBinding
 import com.kg.malikov.mukminapp.models.namaztime.Datum
@@ -10,9 +11,10 @@ import com.kg.malikov.mukminapp.utils.showToast
 import org.koin.android.viewmodel.ext.android.viewModel
 
 
-class MainFragment : Fragment(R.layout.main_fragment) {
+class MainFragment : Fragment(R.layout.main_fragment){
     private val viewModel: MainViewModel by viewModel()
     private var binding: MainFragmentBinding? = null
+
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -22,7 +24,6 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         viewModel.listTimes.observeForever {
             filingRecViewValue(it)
         }
-
     }
 
     //fill rec view value

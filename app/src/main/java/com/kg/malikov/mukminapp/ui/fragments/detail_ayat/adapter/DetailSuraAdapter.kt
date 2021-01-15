@@ -1,4 +1,4 @@
-package com.kg.malikov.mukminapp.ui.fragments.detailayat.adapter
+package com.kg.malikov.mukminapp.ui.fragments.detail_ayat.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

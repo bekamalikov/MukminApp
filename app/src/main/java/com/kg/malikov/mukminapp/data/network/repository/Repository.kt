@@ -8,10 +8,8 @@ import com.kg.malikov.mukminapp.data.network.quran.QuranApi
 import com.kg.malikov.mukminapp.utils.*
 import kotlinx.coroutines.Dispatchers
 
-class Repository(
-    val apiNamaz: NamazTimeApi,
-    val apiQuran: QuranApi
-) {
+class Repository(val apiNamaz: NamazTimeApi, val apiQuran: QuranApi) {
+
     fun fetchNamazTimeFromNetworkByCalendar() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
@@ -26,6 +24,7 @@ class Repository(
         }
 
     }
+
 
     fun fetchNamazTimeTodayFromNetworkByCity() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
@@ -65,5 +64,22 @@ class Repository(
 
     }
 
+    /*   fun fetchNameByNetwork(list: MutableList<NameModel?>) =
+           liveData(Dispatchers.IO) {
+               emit(Resource.loading(data = null))
+               try {
+                   val data = fetchListNameFromFirebase(list)
+                   emit(Resource.success(data = data))
+               } catch (e: Exception) {
+                   emit(Resource.error(data = null, message = e.message ?: "Error"))
+               }
+           }*/
+
 
 }
+
+
+
+
+
+

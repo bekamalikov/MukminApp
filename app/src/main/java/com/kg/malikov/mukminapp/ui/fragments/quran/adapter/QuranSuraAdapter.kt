@@ -25,7 +25,7 @@ class QuranSuraAdapter(
     }
 
     override fun onBindViewHolder(holder: QuranSuraViewHolder, position: Int) {
-        holder.bind(data.get(position))
+        holder.bind(data[position])
         holder.itemView.setOnClickListener {
             onItemClick.onItemClick(position)
         }

@@ -20,6 +20,7 @@ import com.kg.malikov.mukminapp.ui.TimeNotification
 import com.kg.malikov.mukminapp.ui.fragments.compass.CompassFragment
 import com.kg.malikov.mukminapp.ui.fragments.main.MainFragment
 import com.kg.malikov.mukminapp.ui.objects.AppHideFab
+import com.kg.malikov.mukminapp.utils.initFirebase
 import com.kg.malikov.mukminapp.utils.replaceFragment
 import java.util.*
 
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        initFirebase()
         createNotification()
         init()
         showBottomSheet()
@@ -66,6 +68,7 @@ class MainActivity : AppCompatActivity(),
             notificationManager.createNotificationChannel(channel)
         }
     }
+
 
     private fun init() {
         appBar = mBinding.bottomAppBar
@@ -113,5 +116,6 @@ class MainActivity : AppCompatActivity(),
         if (appBar.translationY < 0)
             appBar.translationY = 0f
     }
+
 
 }

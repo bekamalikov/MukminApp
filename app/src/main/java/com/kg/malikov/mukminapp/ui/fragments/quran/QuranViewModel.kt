@@ -7,7 +7,7 @@ import com.kg.malikov.mukminapp.data.network.Status
 import com.kg.malikov.mukminapp.data.network.repository.Repository
 import com.kg.malikov.mukminapp.models.quran.Surah
 
-    class QuranViewModel(var repository: Repository) : ViewModel() {
+class QuranViewModel(var repository: Repository) : ViewModel() {
     var errorMessage = MutableLiveData<String?>()
     var listTimes = MutableLiveData<MutableList<Surah>>()
 
@@ -22,7 +22,5 @@ import com.kg.malikov.mukminapp.models.quran.Surah
             }
         }
     }
-
-
 
 }

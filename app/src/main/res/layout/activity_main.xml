@@ -29,7 +29,7 @@
             app:backgroundTint="@color/primary"
             app:buttonGravity="bottom|top"
             app:hideOnScroll="true"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll|snap"
             app:fabAlignmentMode="center"
             app:menu="@menu/app_bar_menu"
             app:navigationIcon="@drawable/ic_menu">

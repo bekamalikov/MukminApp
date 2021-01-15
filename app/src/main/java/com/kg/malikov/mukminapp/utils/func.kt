@@ -1,12 +1,15 @@
 package com.kg.malikov.mukminapp.utils
 
-import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kg.malikov.mukminapp.R
+import com.kg.malikov.mukminapp.base.BaseChangeFragment
+import java.lang.reflect.ParameterizedType
 
 fun Fragment.showToast(message: String) {
     Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show()
@@ -47,4 +50,24 @@ fun View.gone() {
 
 fun View.visible() {
     this.visibility = View.VISIBLE
+}
+
+internal fun <V : ViewBinding> getBinding(obj: Any, layoutInflater: LayoutInflater): V {
+    val clazz = (obj.javaClass
+        .genericSuperclass as ParameterizedType)
+        .actualTypeArguments[0] as (Class<*>)
+    try {
+        return clazz.getMethod(
+            "inflate",
+            LayoutInflater::class.java
+        ).invoke(null, layoutInflater) as V
+    } catch (ex: Exception) {
+        throw RuntimeException("The ViewBinding inflate function has been changed.", ex)
+    }
+}
+
+
+
+internal fun <V : ViewBinding> BaseChangeFragment<V>.getBinding(): V {
+    return getBinding(this, layoutInflater)
 }

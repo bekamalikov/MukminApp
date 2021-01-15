@@ -44,4 +44,5 @@ class RetrofitClient {
         return retrofitQuran.create(QuranApi::class.java)
     }
 
+
 }

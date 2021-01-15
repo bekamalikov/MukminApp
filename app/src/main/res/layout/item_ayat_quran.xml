@@ -24,18 +24,21 @@
             android:id="@+id/textView_dot"
             style="@style/text_sura_style"
             android:text="@string/str_dot_def"
+            android:layout_marginRight="@dimen/_12"
+            app:layout_constraintRight_toLeftOf="@id/textView_name_ayat"
             app:layout_constraintStart_toEndOf="@id/tv_number_ayat"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/textView_name_ayat"
             style="@style/text_sura_style"
+            android:layout_width="match_parent"
             android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_normal"
             android:text="Во имя Аллаха, Милостивого, Милосердного!"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/textView_dot"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

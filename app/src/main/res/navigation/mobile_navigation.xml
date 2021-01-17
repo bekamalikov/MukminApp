@@ -88,4 +88,14 @@
         android:id="@+id/detailNameFragment"
         android:name="com.kg.malikov.mukminapp.ui.fragments.detail_name.DetailNameFragment"
         android:label="DetailNameFragment" />
+    <fragment
+        android:id="@+id/detailHadisFragment"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.detail_hadis.DetailHadisFragment"
+        android:label="detail_hadis_fragment"
+        tools:layout="@layout/detail_hadis_fragment" />
+    <fragment
+        android:id="@+id/detail_dua_fragment"
+        android:name="com.kg.malikov.mukminapp.ui.fragments.detail_dua.DetailDuaFragment"
+        android:label="detail_dua_fragment"
+        tools:layout="@layout/detail_dua_fragment" />
 </navigation>

@@ -9,6 +9,7 @@ import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kg.malikov.mukminapp.R
 import com.kg.malikov.mukminapp.base.BaseChangeFragment
+import com.kg.malikov.mukminapp.base.BaseFragment
 import java.lang.reflect.ParameterizedType
 
 fun Fragment.showToast(message: String) {
@@ -69,5 +70,8 @@ internal fun <V : ViewBinding> getBinding(obj: Any, layoutInflater: LayoutInflat
 
 
 internal fun <V : ViewBinding> BaseChangeFragment<V>.getBinding(): V {
+    return getBinding(this, layoutInflater)
+}
+internal fun <V : ViewBinding> BaseFragment<V>.getBindingForBaseFragment(): V {
     return getBinding(this, layoutInflater)
 }

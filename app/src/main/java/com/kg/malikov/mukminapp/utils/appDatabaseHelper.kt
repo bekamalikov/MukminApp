@@ -10,6 +10,8 @@ lateinit var mRefUserListener: AppValueEventListener
 
 
 const val NODE_NAMES = "names"
+const val NODE_HADIS = "hadis"
+const val NODE_DUA = "dua"
 
 
 fun initFirebase() {

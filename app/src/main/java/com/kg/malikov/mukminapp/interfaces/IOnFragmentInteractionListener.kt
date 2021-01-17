@@ -1,5 +1,5 @@
 package com.kg.malikov.mukminapp.interfaces
 
-interface OnFragmentInteractionListener {
+interface IOnFragmentInteractionListener {
     fun onFragmentScrolled(delta: Float)
 }

@@ -15,6 +15,7 @@ import com.kg.malikov.mukminapp.R
 
 class AppNavigationDrawerFragment : BottomSheetDialogFragment() {
     lateinit var navigationView: NavigationView
+    val mainActivity = MainActivity()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

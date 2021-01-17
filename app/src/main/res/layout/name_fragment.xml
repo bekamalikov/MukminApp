@@ -8,7 +8,7 @@
     android:background="@color/background">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec_view_sura_in_quran"
+        android:id="@+id/rec_view_name"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"

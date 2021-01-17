@@ -6,6 +6,8 @@
     android:layout_marginStart="@dimen/_12"
     android:layout_marginLeft="@dimen/_12"
     android:layout_marginTop="@dimen/_12"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="@dimen/_12">
 
     <LinearLayout

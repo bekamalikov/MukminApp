@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kg.malikov.mukminapp.databinding.ItemNameBinding
-import com.kg.malikov.mukminapp.interfaces.IOnItemClick
 import com.kg.malikov.mukminapp.interfaces.IOnItemClickName
 import com.kg.malikov.mukminapp.models.name.NameModel
 

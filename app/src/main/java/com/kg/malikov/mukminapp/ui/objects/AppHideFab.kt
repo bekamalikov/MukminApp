@@ -1,7 +1,6 @@
 package com.kg.malikov.mukminapp.ui.objects
 
 import androidx.navigation.findNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kg.malikov.mukminapp.MainActivity
 import com.kg.malikov.mukminapp.R
 
@@ -12,7 +11,8 @@ class AppHideFab {
             .addOnDestinationChangedListener { controller, destination, arguments ->
                 when (destination.id) {
                     R.id.nav_dua -> {
-                       mainActivity.fab?.hide()
+                        mainActivity.fab?.hide()
+
                     }
                     R.id.nav_name -> {
                         mainActivity.fab?.hide()
@@ -27,7 +27,6 @@ class AppHideFab {
                         mainActivity.fab?.hide()
                     }
                     R.id.nav_main -> {
-                        b = false
                         mainActivity.fab?.setImageResource(R.drawable.ic_icon_qibla)
                         mainActivity.fab?.show()
                     }

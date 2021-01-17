@@ -9,6 +9,7 @@ import com.kg.malikov.mukminapp.models.quran.Surah
 
 class QuranViewModel(var repository: Repository) : ViewModel() {
     var errorMessage = MutableLiveData<String?>()
+    val isLoading = MutableLiveData(false)
     var listTimes = MutableLiveData<MutableList<Surah>>()
 
     fun fetchQuran() {
@@ -17,8 +18,11 @@ class QuranViewModel(var repository: Repository) : ViewModel() {
                 Status.SUCCESS -> {
                     listTimes.postValue(it.data?.data?.surahs)
                     Log.d("anime", it.data.toString())
+                    isLoading.value = false
                 }
                 Status.ERROR -> errorMessage.value = it.message.toString()
+                Status.LOADING -> isLoading.value = true
+
             }
         }
     }

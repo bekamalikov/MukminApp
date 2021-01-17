@@ -6,5 +6,6 @@ data class NameModel(
     val name: String = "",
     val arabName: String = "",
     val nameTranslation: String = "",
+    val meaningName: String = "",
 )
 

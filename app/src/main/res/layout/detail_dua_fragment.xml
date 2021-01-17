@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/_12"
-    android:background="@color/background"
-    android:paddingRight="@dimen/_12">
+    tools:context=".ui.fragments.detail_dua.DetailDuaFragment">
+
+
 
     <TextView
-        android:layout_marginTop="@dimen/_12"
-        android:id="@+id/name_tv"
+        android:id="@+id/dua_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="36dp" />
+        android:layout_marginTop="@dimen/_12"
+        android:text="Title"
+        android:textSize="24sp" />
 
     <View
         android:layout_width="match_parent"
@@ -21,13 +22,13 @@
         android:background="@color/black" />
 
     <TextView
-        android:id="@+id/arab_name_tv"
-        android:layout_marginTop="@dimen/_12"
+        android:id="@+id/dua_arabic_desc_tv"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12"
+        android:text="ArabicDesc"
         android:textColor="@color/yellow"
-        android:layout_height="wrap_content"
-        android:text="ArabName"
-        android:textSize="36dp" />
+        android:textSize="24sp" />
 
     <View
         android:layout_width="match_parent"
@@ -35,20 +36,21 @@
         android:background="@color/black" />
 
     <TextView
-        android:id="@+id/translate_name_tv"
+        android:id="@+id/dua_desc_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_12"
-        android:text="Translate"
-        android:textSize="36dp" />
+        android:text="title"
+        android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/meaningName_tv"
+        android:id="@+id/dua_transcription_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_12"
-        android:text="meaningName"
-        android:textSize="36dp"
+        android:text="Transcription"
+        android:textSize="24sp"
         android:textStyle="bold" />
+
 
 </LinearLayout>

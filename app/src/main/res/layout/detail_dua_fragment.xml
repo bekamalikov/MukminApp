@@ -7,7 +7,6 @@
     tools:context=".ui.fragments.detail_dua.DetailDuaFragment">
 
 
-
     <TextView
         android:id="@+id/dua_title_tv"
         android:layout_width="wrap_content"

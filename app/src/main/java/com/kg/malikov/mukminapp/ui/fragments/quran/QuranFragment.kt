@@ -1,7 +1,5 @@
 package com.kg.malikov.mukminapp.ui.fragments.quran
 
-import android.content.Context
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -10,7 +8,6 @@ import com.kg.malikov.mukminapp.R
 import com.kg.malikov.mukminapp.base.BaseChangeFragment
 import com.kg.malikov.mukminapp.databinding.QuranFragmentBinding
 import com.kg.malikov.mukminapp.interfaces.IOnItemClick
-import com.kg.malikov.mukminapp.interfaces.IOnFragmentInteractionListener
 import com.kg.malikov.mukminapp.ui.fragments.quran.adapter.QuranSuraAdapter
 import com.kg.malikov.mukminapp.utils.SURA_POSITION_KYE
 import com.kg.malikov.mukminapp.utils.gone

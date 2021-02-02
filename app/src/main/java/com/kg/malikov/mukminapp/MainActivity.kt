@@ -11,7 +11,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.DialogFragment
-import androidx.navigation.findNavController
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kg.malikov.mukminapp.databinding.ActivityMainBinding
@@ -28,7 +27,7 @@ import java.util.*
 class MainActivity : AppCompatActivity(),
     IOnFragmentInteractionListener {
     private lateinit var mBinding: ActivityMainBinding
-     lateinit var appBar: BottomAppBar
+    lateinit var appBar: BottomAppBar
     private lateinit var bottomNavDrawerFragment: AppNavigationDrawerFragment
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var alManager: AlarmManager
@@ -113,7 +112,7 @@ class MainActivity : AppCompatActivity(),
     override fun onFragmentScrolled(delta: Float) {
         appBar.translationY = appBar.translationY + delta
         if (appBar.translationY > appBar.height)
-                appBar.translationY = appBar.height.toFloat()
+            appBar.translationY = appBar.height.toFloat()
         if (appBar.translationY < 0)
             appBar.translationY = 0f
     }

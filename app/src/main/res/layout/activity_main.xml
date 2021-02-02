@@ -32,8 +32,7 @@
             app:layout_scrollFlags="scroll|snap"
             app:fabAlignmentMode="center"
             app:menu="@menu/app_bar_menu"
-            app:navigationIcon="@drawable/ic_menu">
-        </com.google.android.material.bottomappbar.BottomAppBar>
+            app:navigationIcon="@drawable/ic_menu"></com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_app_bar_qibla"

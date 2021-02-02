@@ -57,5 +57,4 @@ class CompassFragment : Fragment() {
     }
 
 
-
 }

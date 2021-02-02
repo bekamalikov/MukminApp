@@ -9,4 +9,4 @@ data class HadisModel(
     val nameHadis: String = "",
     val numberHadis: Int? = null,
     val title: String = "",
-):Serializable
+) : Serializable

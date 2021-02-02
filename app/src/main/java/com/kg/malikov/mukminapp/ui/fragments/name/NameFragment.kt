@@ -6,7 +6,6 @@ import androidx.navigation.fragment.findNavController
 import com.kg.malikov.mukminapp.R
 import com.kg.malikov.mukminapp.base.BaseChangeFragment
 import com.kg.malikov.mukminapp.databinding.NameFragmentBinding
-import com.kg.malikov.mukminapp.interfaces.IOnFragmentInteractionListener
 import com.kg.malikov.mukminapp.interfaces.IOnItemClickName
 import com.kg.malikov.mukminapp.models.name.NameModel
 import com.kg.malikov.mukminapp.ui.fragments.name.adapter.NameAdapter

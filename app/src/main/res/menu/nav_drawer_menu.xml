@@ -2,36 +2,36 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-        <item
-            android:id="@+id/nav_name"
-            android:icon="@drawable/ic_name_icon"
-            android:title="@string/title_name_menu" />
-        <item
-            android:id="@+id/nav_dua"
-            android:icon="@drawable/ic_dua"
-            android:title="@string/title_dua_menu" />
-        <item
-            android:id="@+id/nav_hadis"
-            android:icon="@drawable/ic_qibla_icon_for_menu"
-            android:title="@string/title_hadis_menu" />
-        <item
-            android:id="@+id/nav_namaz"
-            android:icon="@drawable/ic_takbir_1"
-            android:title="@string/title_namaz_menu" />
-        <item
-            android:id="@+id/nav_quran"
-            android:icon="@drawable/ic_quran_icon"
-            android:title="@string/title_translate_quran_menu" />
+    <item
+        android:id="@+id/nav_name"
+        android:icon="@drawable/ic_name_icon"
+        android:title="@string/title_name_menu" />
+    <item
+        android:id="@+id/nav_dua"
+        android:icon="@drawable/ic_dua"
+        android:title="@string/title_dua_menu" />
+    <item
+        android:id="@+id/nav_hadis"
+        android:icon="@drawable/ic_qibla_icon_for_menu"
+        android:title="@string/title_hadis_menu" />
+    <item
+        android:id="@+id/nav_namaz"
+        android:icon="@drawable/ic_takbir_1"
+        android:title="@string/title_namaz_menu" />
+    <item
+        android:id="@+id/nav_quran"
+        android:icon="@drawable/ic_quran_icon"
+        android:title="@string/title_translate_quran_menu" />
 
-        <item
+    <item
 
-            android:id="@+id/share_item_menu"
-            android:icon="@drawable/ic_share"
-            android:title="@string/title_share_menu" />
-        <item
-            android:id="@+id/other_item_menu"
-            android:icon="@drawable/ic_other"
-            android:title="@string/title_other_menu" />
+        android:id="@+id/share_item_menu"
+        android:icon="@drawable/ic_share"
+        android:title="@string/title_share_menu" />
+    <item
+        android:id="@+id/other_item_menu"
+        android:icon="@drawable/ic_other"
+        android:title="@string/title_other_menu" />
 
 
 </menu>

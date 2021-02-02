@@ -12,7 +12,6 @@ class AppHideFab {
                 when (destination.id) {
                     R.id.nav_dua -> {
                         mainActivity.fab?.hide()
-
                     }
                     R.id.nav_name -> {
                         mainActivity.fab?.hide()

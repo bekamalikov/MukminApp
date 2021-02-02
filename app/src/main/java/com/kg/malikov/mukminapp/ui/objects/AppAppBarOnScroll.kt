@@ -5,9 +5,8 @@ import com.google.android.material.bottomappbar.BottomAppBar
 class AppAppBarOnScroll {
 
 
+    fun hideOnScroll(appBar: BottomAppBar) {
 
-fun hideOnScroll(appBar:BottomAppBar){
 
-
-}
+    }
 }

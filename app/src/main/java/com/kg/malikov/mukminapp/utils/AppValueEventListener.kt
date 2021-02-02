@@ -6,7 +6,7 @@ import com.google.firebase.database.ValueEventListener
 
 /* Модификация класса ValueEventListener */
 
-class AppValueEventListener (val onSuccess:(DataSnapshot) -> Unit) :ValueEventListener{
+class AppValueEventListener(val onSuccess: (DataSnapshot) -> Unit) : ValueEventListener {
     override fun onCancelled(p0: DatabaseError) {
 
     }

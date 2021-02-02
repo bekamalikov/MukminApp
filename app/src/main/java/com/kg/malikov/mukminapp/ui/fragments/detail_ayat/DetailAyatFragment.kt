@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import com.kg.malikov.mukminapp.base.BaseChangeFragment
 import com.kg.malikov.mukminapp.databinding.DetailAyatFragmentBinding
-import com.kg.malikov.mukminapp.interfaces.IOnFragmentInteractionListener
 import com.kg.malikov.mukminapp.ui.fragments.detail_ayat.adapter.DetailSuraAdapter
 import com.kg.malikov.mukminapp.utils.SURA_POSITION_KYE
 import org.koin.android.viewmodel.ext.android.viewModel

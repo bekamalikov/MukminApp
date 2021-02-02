@@ -2,10 +2,7 @@ package com.kg.malikov.mukminapp.data.network.namaztime
 
 import com.kg.malikov.mukminapp.models.namaztime.NamazTimeModel
 import com.kg.malikov.mukminapp.models.namaztime.NamazTimeModelToday
-import com.kg.malikov.mukminapp.models.quran.QuranModel
-import com.kg.malikov.mukminapp.models.quran.SuraModel
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface NamazTimeApi {
@@ -25,7 +22,7 @@ interface NamazTimeApi {
         @Query("school") school: String,
         @Query("city") city: String,
         @Query("country") country: String,
-        ): NamazTimeModelToday
+    ): NamazTimeModelToday
 
 
 }

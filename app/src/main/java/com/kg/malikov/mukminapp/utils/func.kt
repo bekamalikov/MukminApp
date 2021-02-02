@@ -15,9 +15,11 @@ import java.lang.reflect.ParameterizedType
 fun Fragment.showToast(message: String) {
     Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show()
 }
+
 internal fun BottomNavigationView.checkItem(actionId: Int) {
     menu.findItem(actionId)?.isChecked = true
 }
+
 fun AppCompatActivity.replaceFragment(fragment: Fragment, addStack: Boolean = true) {
     if (addStack) {
         supportFragmentManager.beginTransaction()
@@ -68,10 +70,10 @@ internal fun <V : ViewBinding> getBinding(obj: Any, layoutInflater: LayoutInflat
 }
 
 
-
 internal fun <V : ViewBinding> BaseChangeFragment<V>.getBinding(): V {
     return getBinding(this, layoutInflater)
 }
+
 internal fun <V : ViewBinding> BaseFragment<V>.getBindingForBaseFragment(): V {
     return getBinding(this, layoutInflater)
 }

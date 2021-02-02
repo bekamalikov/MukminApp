@@ -19,8 +19,8 @@ class MainViewModel(var repository: Repository) : ViewModel() {
                     listTimes.postValue(it.data?.data)
                     Log.e("ololo", "fetchTimeSuccess:  $listTimes")
                 }
-                Status.ERROR -> errorMessage.value=it.message.toString()
-                }
+                Status.ERROR -> errorMessage.value = it.message.toString()
             }
+        }
     }
 }

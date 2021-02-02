@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "428688720732",
+    "firebase_url": "https://mukminapp-5203f-default-rtdb.firebaseio.com",
+    "project_id": "mukminapp-5203f",
+    "storage_bucket": "mukminapp-5203f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428688720732:android:a2190070eb20f3654af799",
+        "android_client_info": {
+          "package_name": "com.kg.malikov.mukminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428688720732-d5bd2vbic2sp088385c8acjeo44vt515.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0HTmeyU-EjPHoy_kX5culH2nv63KDBQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428688720732-d5bd2vbic2sp088385c8acjeo44vt515.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

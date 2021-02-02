@@ -47,32 +47,32 @@
     <dialog
         android:id="@+id/bottom_sheet"
         android:name="com.kg.malikov.mukminapp.ui.AppNavigationDrawerFragment"
-        tools:layout="@layout/fragment_navigation_drawer" >
+        tools:layout="@layout/fragment_navigation_drawer">
         <action
             android:id="@+id/action_bottom_sheet_to_nav_dua"
             app:destination="@id/nav_dua"
             app:popUpTo="@id/nav_main"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_bottom_sheet_to_nav_name"
             app:destination="@id/nav_name"
             app:popUpTo="@id/nav_main"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_bottom_sheet_to_nav_hadis"
             app:destination="@id/nav_hadis"
             app:popUpTo="@id/nav_main"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_bottom_sheet_to_nav_namaz"
             app:destination="@id/nav_namaz"
             app:popUpTo="@id/nav_main"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_bottom_sheet_to_nav_quran"
             app:destination="@id/nav_quran"
             app:popUpTo="@id/nav_main"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </dialog>
     <fragment
         android:id="@+id/compassFragment"

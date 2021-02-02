@@ -1,7 +1,6 @@
 package com.kg.malikov.mukminapp.ui.fragments.hadis
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.kg.malikov.mukminapp.R

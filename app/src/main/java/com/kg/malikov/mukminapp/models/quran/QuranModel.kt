@@ -10,22 +10,21 @@ data class Ayah(
     var page: Int? = null,
     var ruku: Int? = null,
     var hizbQuarter: Int? = null,
- //   var sajda: Boolean? = null
+    //   var sajda: Boolean? = null
 )
 
 data class Data(
-    var surahs: MutableList<Surah>?=null,
+    var surahs: MutableList<Surah>? = null,
     var edition: Edition? = null,
 
 
-)
+    )
 
 data class QuranModel(
     var code: Int? = null,
     var status: String? = null,
     var data: Data? = null
 )
-
 
 
 data class Surah(
